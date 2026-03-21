@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+    <form id="autoForm" th:action="@{/ott}" method="post">
+        <input type="hidden" name="token" th:value="${token}" />
+
+    </form>
+
+    <script th:inline="javascript">
+        window.onload = function() {
+            document.getElementById("autoForm").submit();
+        };
+    </script>
+    </body>
+</html>

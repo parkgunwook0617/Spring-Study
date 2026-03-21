@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="autoForm" th:action="@{/ott/generate}" method="post">
+    <input type="hidden" name="username" th:value="${username}" readonly />
+</form>
+
+<script th:inline="javascript">
+    window.onload = function() {
+        document.getElementById("autoForm").submit();
+    };
+</script>
+</body>
+</html>
